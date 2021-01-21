@@ -1,9 +1,15 @@
-var marks = [45, 64, 87, 95, 49, 57, 51];
-var max = marks[0];
-for (var i = 0; i < marks.length; i++) {
-    var element = marks[i];
-    if (element > max) {
-        max = element;
+
+function megaFriend(names) {
+    var lgth = 0;
+    var longest;
+
+    for (var i = 0; i < names.length; i++) {
+        if (names[i].length > lgth) {
+            var lgth = names[i].length;
+            longest = names[i];
+        }
     }
+    return longest;
 }
-console.log("Highest value is: ", max);
+var marks = megaFriend(['kalam', 'salluuu', 'dada', 'yoo', 'hi']);
+console.log("Highest value is: ", marks);
